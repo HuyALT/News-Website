@@ -1,51 +1,51 @@
-# Website xem tin tức
+# News website
 
-Dự án đơn giản nhằm mục đích học tập và tìm hiểu về microservice và Spring Framework.
+A simple project aimed at learning and understanding microservices and the Spring Framework.
 
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 
-# Mục lục
-- [Cơ sở dữ liệu](#Cơ-sở-dữ-liệu)
-- [Tổng quan về hệ thống Back-end](#Tổng-quan-về-hệ-thống-Back-end)
-- [Tổng quan về giao diện](#Tổng-quan-về-giao-diện)
-- [Cách khởi chạy back-end bằng Docker](#Cách-khởi-chạy-back-end-bằng-Docker)
+# Table of content
+- [Database](#Database)
+- [Back-end System](#Back-end-System)
+- [User Interface](#User-Interface)
+- [How to launch back-end using Docker](#How-to-launch-back-end-using-Docker)
 
-## Cơ sở dữ liệu
+## Database
 
-Cơ sở dữ liệu được thiết kế đơn giản hóa như sau:
+The database is designed to be simplified as shown below:
 
 ![ERD](image/News-ERD.png)
 
-Với khá ít bảng, việc phân chia cơ sở dữ liệu là không cần thiết. Tuy nhiên, để nghiên cứu về kiến trúc microservice, nó được phân chia như sau:
+With so few tables, database partitioning is unnecessary. However, for the purpose of studying microservice architecture, it has been divided as follows:
 
 ![ERD Split](image/News-ERD-split.png)
 
-## Tổng quan về hệ thống Back-end
+## Back-end System
 Cách hoạt động back-end được mô tả trong hình sau
 ![ERD Split](image/BackendLogic.png)
 
-## Tổng quan về giao diện
+## User Interface
 Được viết bằng Angular. Phần này không được chi tiết lắm nhưng về cơ bản các chức năng vẫn hoạt động bình thường
-### Trang Chủ
+### Home
 ![ERD Split](image/front-end-1.png)
-### Chi tiết tin tức
+### News details
 ![ERD Split](image/front-end-2.png)
-### Giao diện quản lý
+### Management
 ![ERD Split](image/front-end-3.png)
 
-## Cách khởi chạy back-end bằng Docker
+## How to launch back-end using Docker
 
 #### Docker compose v1
-Cập nhật các biến môi trường trong file service.env sau đó chạy.
+Update the environment variables in the service.env file then run.
 ````cmd
 docker-compose --env-file service.env up -d
 ````
 #### Docker compose v2
-Thay thế biến môi trường trực tiếp trong file docker-compose.yml chạy
+Replace environment variables directly in the docker-compose.yml file
 ````cmd
 docker compose up -d
 ````
-#### Hướng dẫn sử dụng API [API Doccument](https://docs.google.com/document/d/1MILX7e_m3uf-qo26MZG9JSqRdvJ1B2_e/edit?usp=sharing&ouid=107957117387250494661&rtpof=true&sd=true)
+#### API Doccument [API Doccument](https://docs.google.com/document/d/1MILX7e_m3uf-qo26MZG9JSqRdvJ1B2_e/edit?usp=sharing&ouid=107957117387250494661&rtpof=true&sd=true)
